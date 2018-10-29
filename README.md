@@ -63,7 +63,7 @@ Readme будет обновлятся.
 
 <details>
   <summary>Структура моего проекта</summary>
-  ```
+```
     src
     ├── __tests__
     │   └── server.test.js
@@ -104,5 +104,5 @@ Readme будет обновлятся.
     │       ├── localstorage.js
     │       └── network.js
     └── store.js
-  ```
+```
 </details>
