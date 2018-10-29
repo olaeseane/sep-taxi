@@ -61,9 +61,8 @@ email.
 
 Readme будет обновлятся.
 
-<details>
-  <summary>Структура моего проекта</summary>
-```
+### Структура моего проекта
+``` bash
     src
     ├── __tests__
     │   └── server.test.js
@@ -105,4 +104,4 @@ Readme будет обновлятся.
     │       └── network.js
     └── store.js
 ```
-</details>
+
