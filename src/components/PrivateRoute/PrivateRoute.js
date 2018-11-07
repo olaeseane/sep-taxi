@@ -5,14 +5,14 @@ import { getIsAuthorized } from '../../modules/Auth';
 
 class PrivateRoute extends PureComponent {
   render() {
-    const { isAuthorized, component, ...rest } = this.props;
+    const { isAuthorized, component } = this.props;
 
-    return <Route {...rest} render={this.renderRoute} />;
+    return isAuthorized ? (
+      <Route component={component} />
+    ) : (
+      <Redirect to="/login" />
+    );
   }
-  renderRoute = props => {
-    const { isAuthorized, component: Component } = this.props;
-    return isAuthorized ? <Component {...props} /> : <Redirect to="/" />;
-  };
 }
 
 export default connect(state => ({

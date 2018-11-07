@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-server": "NODE_ENV=development node server/index.js",
+    "start-server": "set NODE_ENV=development && node server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,6 +52,7 @@
   ],
   "devDependencies": {
     "eslint-plugin-cypress": "^2.0.1",
-    "eslint-plugin-react-perf": "^2.0.9"
+    "eslint-plugin-react-perf": "^2.0.9",
+    "serve": "^10.0.2"
   }
 }
