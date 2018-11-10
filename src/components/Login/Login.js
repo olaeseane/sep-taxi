@@ -14,7 +14,7 @@ import {
 } from '../../modules/Auth/';
 import { load } from '../../modules/utils/localstorage';
 
-const styles = theme => ({
+export const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
@@ -33,7 +33,7 @@ const styles = theme => ({
   }
 });
 
-class Login extends PureComponent {
+export class Login extends PureComponent {
   state = {
     signup: true,
     inputEmail: '',
@@ -96,6 +96,7 @@ class Login extends PureComponent {
           )}
         </Typography>
         <TextField
+          name="email"
           value={inputEmail}
           onChange={this.handleEmailChange}
           fullWidth={true}
@@ -103,6 +104,7 @@ class Login extends PureComponent {
           margin="dense"
         />
         <TextField
+          name="password"
           value={inputPassword}
           onChange={this.handlePasswordChange}
           fullWidth={true}

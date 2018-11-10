@@ -13,8 +13,8 @@ const reducer = handleActions(
       email: action.payload.email,
       id: action.payload.id
     }),
-    //TODO fix error actions handle
-    [authRegistrationFailure]: () => ({
+    [authRegistrationFailure]: (_state) => ({
+      ..._state,
       id: null,
       email: null,
       jwt_token: null

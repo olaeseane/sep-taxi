@@ -25,9 +25,9 @@ function* authRegistrationRequestFlow(action) {
       body: JSON.stringify(action.payload),
       token: false
     });
-    yield put(authRegistrationSuccess(Object.assign({}, data))); //TODO why Object.assign?
+    yield put(authRegistrationSuccess(Object.assign({}, data))); //TODO Object.assign?
   } catch (e) {
-    yield put(authRegistrationFailure(e)); //TODO - handle registration error
+    yield put(authRegistrationFailure(e));
   }
 }
 
@@ -57,9 +57,9 @@ function* authAuthorizationRequestFlow(action) {
       body: JSON.stringify(action.payload),
       token: false
     });
-    yield put(authAuthorizationSuccess(Object.assign({}, data))); //TODO why Object.assign?
+    yield put(authAuthorizationSuccess(Object.assign({}, data)));
   } catch (e) {
-    yield put(authAuthorizationFailure(e)); //TODO - handle registration error
+    yield put(authAuthorizationFailure(e));
   }
 }
 

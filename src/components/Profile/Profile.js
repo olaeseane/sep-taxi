@@ -7,7 +7,7 @@ import { getProfile, getToken, profileRequest } from '../../modules/Profile';
 
 import styles from './Profile.module.css';
 
-class Profile extends Component {
+export class Profile extends Component {
   componentDidMount() {
     const { profileRequest, jwt_token } = this.props;
     profileRequest(jwt_token);

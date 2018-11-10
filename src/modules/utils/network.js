@@ -8,7 +8,7 @@ export const request = ({ path, method = 'GET', body, token }) =>
       {},
       { 'content-type': 'application/json' },
       token && { Authorization: `Bearer ${token}` }
-    ), //TODO why Object.assign?
+    ), //TODO Object.assign?
     mode: 'cors'
   }).then(response => {
     if (response.status < 400) return response.json();
